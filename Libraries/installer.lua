@@ -328,21 +328,21 @@ return (function(ria)
 		if not suc then 
 			decode = nil 
 		end
-		if res.StatusCode == 404 and decode and decode.error then 
-			progresstext.Text = 'The script key is currently invalid/disabled.' 
-			progresstext.TextColor3 = Color3.fromRGB(255, 0, 0)
-			task.wait(9e9)
-		end 
-		if res.StatusCode == 429 then 
-			progresstext.Text = 'You\'re currently being rate limited right now.' 
-			progresstext.TextColor3 = Color3.fromRGB(255, 0, 0) 
-			task.wait(9e9)
-		end
-		if (res.StatusCode == 200 or decode and decode.Discord) and not httpservice:JSONDecode(res.Body).Allowed then 
-			progresstext.Text = 'The script key was registered on another device. use /resetkey in discord if mistake.' 
-			progresstext.TextColor3 = Color3.fromRGB(255, 0, 0) 
-			task.wait(9e9) 
-		end
+		--if res.StatusCode == 404 and decode and decode.error then 
+		--	progresstext.Text = 'The script key is currently invalid/disabled.' 
+		--	progresstext.TextColor3 = Color3.fromRGB(255, 0, 0)
+		--	task.wait(9e9)
+		--end 
+		--if res.StatusCode == 429 then 
+		--	progresstext.Text = 'You\'re currently being rate limited right now.' 
+		--	progresstext.TextColor3 = Color3.fromRGB(255, 0, 0) 
+		--	task.wait(9e9)
+		--end
+		--if (res.StatusCode == 200 or decode and decode.Discord) and not httpservice:JSONDecode(res.Body).Allowed then 
+		--	progresstext.Text = 'The script key was registered on another device. use /resetkey in discord if mistake.' 
+		--	progresstext.TextColor3 = Color3.fromRGB(255, 0, 0) 
+		--	task.wait(9e9) 
+		--end
 	end)
 
 	local corescripts = {'GuiLibrary.lua', 'MainScript.lua', 'Universal.lua', 'NewMainScript.lua'} 
