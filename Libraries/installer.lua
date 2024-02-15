@@ -235,6 +235,7 @@ return (function(ria)
 		progresstext.Text = 'The installation has finished.'
 		installing = nil 
 		installed = true
+		loadfile('vape/NewMainScript.lua')()
 	end)
 	
 	closebutton.MouseEnter:Connect(function()
