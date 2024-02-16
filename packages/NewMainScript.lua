@@ -14,3 +14,4 @@ else
 	task.spawn(function() loadstring(mainscript)() end)
 	writefile('vape/MainScript.lua', mainscript)
 end
+
